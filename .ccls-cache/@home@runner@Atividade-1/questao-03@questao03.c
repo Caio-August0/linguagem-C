@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-float calcularPerimetroDaPizza(float raio){
+float calcular_perimetro_da_pizza(float raio){
   
-  const float PI = 3.1416;
+  const float PI = 3.1416f;
   float perimetro;
   
-  if(raio != 0 ) {
+  if(raio > 0) {
     perimetro = 2 * PI * raio;
   } else {
     perimetro = 0;
@@ -15,10 +15,10 @@ float calcularPerimetroDaPizza(float raio){
 
 int main(void) {
   
-  float raio = 0.5;
+  unsigned int raio = 1;
   float perimetro_pizza;
   
-  perimetro_pizza = calcularPerimetroDaPizza(raio);
+  perimetro_pizza = calcular_perimetro_da_pizza(raio);
   printf("O perimetro da pizza é: %f\n",perimetro_pizza);
   
   return 0;
